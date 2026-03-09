@@ -152,14 +152,14 @@ const App = () => {
                             </RevealOnScroll>
                         </div>
 
-                        <div className="relative hidden lg:block h-[600px] w-full perspective-1000">
+                        <div className="relative h-[320px] sm:h-[420px] lg:h-[600px] w-full perspective-1000 mt-6 lg:mt-0">
                             <RevealOnScroll delay={500} className="absolute inset-0 flex items-center justify-center">
-                                <div className="animate-float relative w-80 h-96 bg-gradient-to-br from-white/[0.08] to-transparent border border-white/[0.1] rounded-3xl backdrop-blur-xl shadow-2xl z-20 flex flex-col items-center justify-center p-8 gap-6 group hover:[animation-play-state:paused]">
+                                <div className="animate-float relative w-56 h-72 sm:w-80 sm:h-96 bg-gradient-to-br from-white/[0.08] to-transparent border border-white/[0.1] rounded-3xl backdrop-blur-xl shadow-2xl z-20 flex flex-col items-center justify-center p-8 gap-6 group hover:[animation-play-state:paused]">
                                     <Palette className="w-16 h-16 text-orange-400 group-hover:scale-110 transition-transform duration-500" />
                                     <div className="h-2 w-24 bg-orange-500/50 rounded-full" />
                                     <div className="h-2 w-16 bg-white/20 rounded-full" />
                                 </div>
-                                <div className="animate-float-reverse absolute w-80 h-96 bg-gradient-to-bl from-orange-500/[0.15] to-transparent border border-orange-500/[0.2] rounded-3xl backdrop-blur-xl shadow-2xl -z-10 flex flex-col items-center justify-center p-8 gap-6 hover:[animation-play-state:paused]">
+                                <div className="animate-float-reverse absolute w-56 h-72 sm:w-80 sm:h-96 bg-gradient-to-bl from-orange-500/[0.15] to-transparent border border-orange-500/[0.2] rounded-3xl backdrop-blur-xl shadow-2xl -z-10 flex flex-col items-center justify-center p-8 gap-6 hover:[animation-play-state:paused]">
                                     <Printer className="w-16 h-16 text-slate-400" />
                                     <div className="h-2 w-20 bg-slate-500/50 rounded-full" />
                                     <div className="h-2 w-32 bg-white/10 rounded-full" />
