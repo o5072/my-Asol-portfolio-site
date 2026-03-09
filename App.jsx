@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
     Menu, X, ChevronRight, Palette, Printer,
     ExternalLink, MessageCircle, ArrowUpRight,
@@ -78,7 +78,7 @@ const App = () => {
                 ? 'bg-black/40 backdrop-blur-xl border-white/10 py-4'
                 : 'bg-transparent border-transparent py-6'
                 }`}>
-                <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex justify-between items-center">
                     <a href="#" className="flex items-center gap-2 group z-50">
                         <Hexagon className="w-8 h-8 text-orange-500 group-hover:rotate-90 transition-transform duration-500" />
                         <span className="text-xl font-bold tracking-tight text-white">
@@ -115,7 +115,7 @@ const App = () => {
             <main className="relative z-10">
 
                 {/* --- Hero Section --- */}
-                <section className="min-h-screen flex items-center pt-20 pb-12 px-6 md:px-12 max-w-7xl mx-auto">
+                <section className="min-h-screen flex items-center pt-24 pb-12 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
                         <div className="space-y-8 relative">
                             <RevealOnScroll delay={100}>
@@ -126,7 +126,7 @@ const App = () => {
                             </RevealOnScroll>
 
                             <RevealOnScroll delay={200}>
-                                <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
+                                <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
                                     Forging <br />
                                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-orange-700">Digital Identity</span> <br />
                                     & Physical Form.
@@ -134,18 +134,18 @@ const App = () => {
                             </RevealOnScroll>
 
                             <RevealOnScroll delay={300}>
-                                <p className="text-lg md:text-xl text-slate-400 max-w-lg leading-relaxed">
+                                <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-lg leading-relaxed">
                                     Asol Creations bridges the gap between Web3 aesthetics and premium tangible assets. We design brands for the future and print materials for the present.
                                 </p>
                             </RevealOnScroll>
 
                             <RevealOnScroll delay={400}>
                                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                    <a href="#work" className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold hover:shadow-[0_0_30px_-5px_rgba(249,115,22,0.4)] transition-all duration-300 group">
+                                    <a href="#work" className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold hover:shadow-[0_0_30px_-5px_rgba(249,115,22,0.4)] transition-all duration-300 group">
                                         View Our Work
                                         <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                     </a>
-                                    <a href="#services" className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-white font-semibold transition-all duration-300 backdrop-blur-md">
+                                    <a href="#services" className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-white font-semibold transition-all duration-300 backdrop-blur-md">
                                         Explore Services
                                     </a>
                                 </div>
@@ -170,7 +170,7 @@ const App = () => {
                 </section>
 
                 {/* --- Services Section --- */}
-                <section id="services" className="py-24 px-6 md:px-12 border-t border-white/5">
+                <section id="services" className="py-16 md:py-24 px-4 sm:px-6 md:px-12 border-t border-white/5">
                     <div className="max-w-7xl mx-auto">
                         <RevealOnScroll className="mb-16">
                             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Our Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Expertise</span></h2>
@@ -196,7 +196,7 @@ const App = () => {
                                 }
                             ].map((service, idx) => (
                                 <RevealOnScroll key={idx} delay={idx * 150}>
-                                    <div className="group h-full p-8 rounded-3xl bg-white/[0.02] border border-white/[0.05] hover:border-orange-500/30 hover:bg-white/[0.04] transition-all duration-500 backdrop-blur-md relative overflow-hidden">
+                                    <div className="group h-full p-6 md:p-8 rounded-3xl bg-white/[0.02] border border-white/[0.05] hover:border-orange-500/30 hover:bg-white/[0.04] transition-all duration-500 backdrop-blur-md relative overflow-hidden">
                                         <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-3xl group-hover:bg-orange-500/20 transition-all duration-500 -mr-10 -mt-10" />
                                         <div className="relative z-10">
                                             <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
@@ -213,7 +213,7 @@ const App = () => {
                 </section>
 
                 {/* --- Work/Portfolio Section --- */}
-                <section id="work" className="py-24 px-6 md:px-12 border-t border-white/5 relative">
+                <section id="work" className="py-16 md:py-24 px-4 sm:px-6 md:px-12 border-t border-white/5 relative">
                     <div className="max-w-7xl mx-auto">
                         <RevealOnScroll className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                             <div>
@@ -269,7 +269,7 @@ const App = () => {
                                         </div>
                                         <div className="flex justify-between items-start px-2">
                                             <div>
-                                                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">{project.title}</h3>
+                                                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">{project.title}</h3>
                                                 <p className="text-slate-400">{project.category}</p>
                                             </div>
                                             <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-orange-500/10 group-hover:border-orange-500/50 transition-all duration-300">
@@ -284,15 +284,15 @@ const App = () => {
                 </section>
 
                 {/* --- Call to Action / Contact --- */}
-                <section id="contact" className="py-24 px-6 md:px-12">
+                <section id="contact" className="py-16 md:py-24 px-4 sm:px-6 md:px-12">
                     <RevealOnScroll className="max-w-5xl mx-auto">
-                        <div className="relative rounded-[2.5rem] p-8 md:p-16 overflow-hidden border border-white/[0.08] bg-white/[0.02] backdrop-blur-xl shadow-2xl">
+                        <div className="relative rounded-[2rem] md:rounded-[2.5rem] p-6 sm:p-8 md:p-16 overflow-hidden border border-white/[0.08] bg-white/[0.02] backdrop-blur-xl shadow-2xl">
                             <div className="absolute top-0 right-0 w-96 h-96 bg-orange-600/20 rounded-full blur-[100px] -z-10" />
                             <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-800/20 rounded-full blur-[100px] -z-10" />
 
                             <div className="relative z-10 text-center space-y-8">
                                 <Hexagon className="w-16 h-16 text-orange-500 mx-auto" />
-                                <h2 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight">
+                                <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white tracking-tight">
                                     Ready to elevate your <br />
                                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">brand presence?</span>
                                 </h2>
@@ -315,7 +315,7 @@ const App = () => {
             </main>
 
             {/* --- Footer --- */}
-            <footer className="border-t border-white/5 bg-black/50 backdrop-blur-lg py-12 px-6 md:px-12 relative z-10">
+            <footer className="border-t border-white/5 bg-black/50 backdrop-blur-lg py-12 px-4 sm:px-6 md:px-12 relative z-10">
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="flex items-center gap-2">
                         <Hexagon className="w-6 h-6 text-orange-500" />
