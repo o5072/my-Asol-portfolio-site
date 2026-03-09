@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+﻿import React, { useState, useEffect, useRef } from 'react';
 import {
     Menu, X, ChevronRight, Palette, Printer,
     ExternalLink, Mail, ArrowUpRight,
@@ -301,7 +301,7 @@ const App = () => {
                                 </p>
 
                                 <div className="pt-8">
-                                    <a href="mailto:hello@asolcreations.com" className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-white text-black font-bold text-lg hover:bg-orange-50 hover:text-orange-600 transition-all duration-300 group">
+                                    <a href="https://wa.me/2348161217535?text=Hi%2C%20I%20want%20to%20start%20a%20project%20with%20you." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-white text-black font-bold text-lg hover:bg-orange-50 hover:text-orange-600 transition-all duration-300 group">
                                         <Mail className="w-6 h-6" />
                                         Start a Project
                                         <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
