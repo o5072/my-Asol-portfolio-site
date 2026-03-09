@@ -1,0 +1,7 @@
+﻿node_modules/
+dist/
+.vite/
+.env
+tools/
+PortableGit.7z.exe
+MinGit.zip
