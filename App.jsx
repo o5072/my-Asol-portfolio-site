@@ -89,7 +89,7 @@ const App = () => {
                     <div className="hidden md:flex items-center gap-8 text-sm font-medium">
                         <a href="#services" className="hover:text-orange-400 transition-colors">Services</a>
                         <a href="#work" className="hover:text-orange-400 transition-colors">Work</a>
-                        <a href="#contact" className="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 transition-all duration-300 backdrop-blur-md">
+                        <a href="#contact" className="hidden md:inline-flex px-5 py-2.5 rounded-full bg-white/5 border border-white/10 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 transition-all duration-300 backdrop-blur-md">
                             Let's Talk
                         </a>
                     </div>
@@ -102,7 +102,7 @@ const App = () => {
                     </button>
                 </div>
 
-                <div className={`fixed inset-0 bg-black/95 backdrop-blur-2xl z-40 transition-transform duration-300 flex flex-col items-center justify-center gap-8 ${mobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
+                <div className={`fixed inset-0 bg-black/95 backdrop-blur-2xl z-40 transition-transform duration-300 flex flex-col items-center justify-center gap-8 ${mobileMenuOpen ? 'translate-y-0 opacity-100 pointer-events-auto' : '-translate-y-full opacity-0 pointer-events-none'
                     } md:hidden`}>
                     <a href="#services" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-semibold hover:text-orange-400 transition-colors">Services</a>
                     <a href="#work" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-semibold hover:text-orange-400 transition-colors">Work</a>
