@@ -23,7 +23,6 @@ const RevealOnScroll = ({ children, delay = 0, className = "" }) => {
         if (ref.current) observer.observe(ref.current);
         return () => observer.disconnect();
     }, []);
-
     return (
         <div
             ref={ref}
@@ -39,6 +38,7 @@ const RevealOnScroll = ({ children, delay = 0, className = "" }) => {
 const App = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [activeCategory, setActiveCategory] = useState('All');
 
     // Handle scroll effect for glassmorphic navbar
     useEffect(() => {
@@ -49,10 +49,62 @@ const App = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const projectCategories = ["All", "Branding", "Print", "Web3", "UI/UX", "Packaging"];
+    const allProjects = [
+        {
+            title: "Nexus DeFi Protocol",
+            category: "Brand Identity & UI",
+            img: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000",
+            tag: "Web3"
+        },
+        {
+            title: "Aura Premium Skincare",
+            category: "Packaging & Print",
+            img: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&q=80&w=1000",
+            tag: "Packaging"
+        },
+        {
+            title: "Vertex Cybernetics",
+            category: "Logo Design",
+            img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1000",
+            tag: "Branding"
+        },
+        {
+            title: "Neon Nights Event",
+            category: "Large Format Print",
+            img: "https://images.unsplash.com/photo-1557672172-298e090bd0f1?auto=format&fit=crop&q=80&w=1000",
+            tag: "Print"
+        },
+        {
+            title: "Solstice DAO",
+            category: "UI/UX & Dashboard",
+            img: "https://images.unsplash.com/photo-1556155092-8707de31f9c4?auto=format&fit=crop&q=80&w=1000",
+            tag: "UI/UX"
+        },
+        {
+            title: "Obsidian Studio",
+            category: "Brand System",
+            img: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&q=80&w=1000",
+            tag: "Branding"
+        },
+        {
+            title: "Lumen Coffee Roasters",
+            category: "Packaging & Labels",
+            img: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=1000",
+            tag: "Packaging"
+        },
+        {
+            title: "MetaMint Studio",
+            category: "NFT Collection Art",
+            img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1000",
+            tag: "Web3"
+        }
+    ];
+    const filteredProjects = activeCategory === "All"
+        ? allProjects
+        : allProjects.filter(project => project.tag === activeCategory);
     return (
-        <div className="min-h-screen bg-black text-slate-300 font-body selection:bg-orange-500/30 selection:text-orange-200 relative overflow-hidden">
-
-            <style>
+        <div className="min-h-screen bg-black text-slate-300 font-body selection:bg-orange-500/30 selection:text-orange-200 relative overflow-hidden">`r`n`r`n            <style>
                 {`
           @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(6deg); }
@@ -220,7 +272,7 @@ const App = () => {
                                 <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold text-white mb-6">Selected <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Works</span></h2>
                                 <p className="text-slate-400 max-w-2xl text-base sm:text-lg">A showcase of projects across digital branding and physical media.</p>
                             </div>
-                            <a href="#" className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 font-medium group">
+                            <a href="#projects" className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 font-medium group">
                                 View All Projects <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </a>
                         </RevealOnScroll>
@@ -273,6 +325,62 @@ const App = () => {
                                                 <p className="text-slate-400">{project.category}</p>
                                             </div>
                                             <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-orange-500/10 group-hover:border-orange-500/50 transition-all duration-300">
+                                                <ExternalLink className="w-5 h-5 text-slate-300 group-hover:text-orange-400" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </RevealOnScroll>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* --- All Projects Section --- */}
+                <section id="projects" className="py-16 md:py-24 px-4 sm:px-6 md:px-12 border-t border-white/5">
+                    <div className="max-w-7xl mx-auto">
+                        <RevealOnScroll className="mb-12">
+                            <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold text-white mb-4">All <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Projects</span></h2>
+                            <p className="text-slate-400 max-w-2xl text-base sm:text-lg">Browse the full catalog by category to see the range of branding, print, and digital work.</p>
+                        </RevealOnScroll>
+
+                        <div className="flex flex-wrap gap-3 mb-10">
+                            {projectCategories.map(category => (
+                                <button
+                                    key={category}
+                                    onClick={() => setActiveCategory(category)}
+                                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 border ${activeCategory === category
+                                        ? 'bg-orange-500/20 border-orange-500 text-orange-300'
+                                        : 'bg-white/5 border-white/10 text-slate-300 hover:text-orange-300 hover:border-orange-500/50'
+                                        }`}
+                                >
+                                    {category}
+                                </button>
+                            ))}
+                        </div>
+
+                        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {filteredProjects.map((project, idx) => (
+                                <RevealOnScroll key={`${project.title}-${idx}`} delay={idx * 80}>
+                                    <div className="group cursor-pointer">
+                                        <div className="relative overflow-hidden rounded-3xl aspect-[4/3] mb-5 border border-white/[0.05]">
+                                            <div className="absolute inset-0 bg-black/25 group-hover:bg-transparent transition-colors duration-500 z-10" />
+                                            <img
+                                                src={project.img}
+                                                alt={project.title}
+                                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
+                                            />
+                                            <div className="absolute top-5 left-5 z-20">
+                                                <span className="px-3 py-1.5 rounded-full bg-black/50 backdrop-blur-md border border-white/10 text-[11px] font-semibold text-white tracking-wider uppercase">
+                                                    {project.tag}
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div className="flex justify-between items-start px-2">
+                                            <div>
+                                                <h3 className="text-lg sm:text-xl md:text-2xl font-heading font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">{project.title}</h3>
+                                                <p className="text-slate-400 text-sm sm:text-base">{project.category}</p>
+                                            </div>
+                                            <div className="w-11 h-11 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-orange-500/10 group-hover:border-orange-500/50 transition-all duration-300">
                                                 <ExternalLink className="w-5 h-5 text-slate-300 group-hover:text-orange-400" />
                                             </div>
                                         </div>
