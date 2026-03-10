@@ -104,9 +104,9 @@ const App = () => {
 
                 <div className={`fixed inset-0 bg-black/95 backdrop-blur-2xl z-40 transition-transform duration-300 flex flex-col items-center justify-center gap-8 ${mobileMenuOpen ? 'translate-y-0 opacity-100 pointer-events-auto' : '-translate-y-full opacity-0 pointer-events-none'
                     } md:hidden`}>
-                    <a href="#services" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-semibold hover:text-orange-400 transition-colors">Services</a>
-                    <a href="#work" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-semibold hover:text-orange-400 transition-colors">Work</a>
-                    <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="mt-4 px-8 py-3 rounded-full bg-gradient-to-r from-orange-500 to-orange-700 text-white font-semibold">
+                    <a href="#services" onClick={() => setMobileMenuOpen(false)} className="text-xl sm:text-2xl font-semibold hover:text-orange-400 transition-colors">Services</a>
+                    <a href="#work" onClick={() => setMobileMenuOpen(false)} className="text-xl sm:text-2xl font-semibold hover:text-orange-400 transition-colors">Work</a>
+                    <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="mt-4 px-6 py-2.5 sm:px-8 sm:py-3 rounded-full bg-gradient-to-r from-orange-500 to-orange-700 text-white text-sm sm:text-base font-semibold">
                         Let's Talk
                     </a>
                 </div>
@@ -141,11 +141,11 @@ const App = () => {
 
                             <RevealOnScroll delay={400}>
                                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                    <a href="#work" className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold hover:shadow-[0_0_30px_-5px_rgba(249,115,22,0.4)] transition-all duration-300 group">
+                                    <a href="#work" className="flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 text-white text-sm sm:text-base font-semibold hover:shadow-[0_0_30px_-5px_rgba(249,115,22,0.4)] transition-all duration-300 group">
                                         View Our Work
                                         <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                     </a>
-                                    <a href="#services" className="flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-white font-semibold transition-all duration-300 backdrop-blur-md">
+                                    <a href="#services" className="flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-white text-sm sm:text-base font-semibold transition-all duration-300 backdrop-blur-md">
                                         Explore Services
                                     </a>
                                 </div>
@@ -301,7 +301,7 @@ const App = () => {
                                 </p>
 
                                 <div className="pt-8">
-                                    <a href="https://wa.me/2348161217535?text=Hi%2C%20I%20want%20to%20start%20a%20project%20with%20you." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-10 py-5 rounded-2xl bg-white text-black font-bold text-lg hover:bg-orange-50 hover:text-orange-600 transition-all duration-300 group">
+                                    <a href="https://wa.me/2348161217535?text=Hi%2C%20I%20want%20to%20start%20a%20project%20with%20you." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-xl sm:rounded-2xl bg-white text-black font-bold text-sm sm:text-base md:text-lg hover:bg-orange-50 hover:text-orange-600 transition-all duration-300 group">
                                         <MessageCircle className="w-6 h-6" />
                                         Start a Project
                                         <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
