@@ -50,7 +50,7 @@ const App = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-black text-slate-300 font-sans selection:bg-orange-500/30 selection:text-orange-200 relative overflow-hidden">
+        <div className="min-h-screen bg-black text-slate-300 font-body selection:bg-orange-500/30 selection:text-orange-200 relative overflow-hidden">
 
             <style>
                 {`
@@ -126,7 +126,7 @@ const App = () => {
                             </RevealOnScroll>
 
                             <RevealOnScroll delay={200}>
-                                <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
+                                <h1 className="text-3xl sm:text-4xl md:text-7xl font-heading font-extrabold tracking-tight text-white leading-[1.1]">
                                     Forging <br />
                                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-orange-700">Digital Identity</span> <br />
                                     & Physical Form.
@@ -173,8 +173,8 @@ const App = () => {
                 <section id="services" className="py-16 md:py-24 px-4 sm:px-6 md:px-12 border-t border-white/5">
                     <div className="max-w-7xl mx-auto">
                         <RevealOnScroll className="mb-16">
-                            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Our Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Expertise</span></h2>
-                            <p className="text-slate-400 max-w-2xl text-lg">Seamlessly blending future-ready digital design with high-fidelity physical printing.</p>
+                            <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold text-white mb-6">Our Core <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Expertise</span></h2>
+                            <p className="text-slate-400 max-w-2xl text-base sm:text-lg">Seamlessly blending future-ready digital design with high-fidelity physical printing.</p>
                         </RevealOnScroll>
 
                         <div className="grid md:grid-cols-3 gap-6">
@@ -202,7 +202,7 @@ const App = () => {
                                             <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                                                 {service.icon}
                                             </div>
-                                            <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                                            <h3 className="text-lg sm:text-xl font-heading font-bold text-white mb-3">{service.title}</h3>
                                             <p className="text-slate-400 leading-relaxed">{service.desc}</p>
                                         </div>
                                     </div>
@@ -217,8 +217,8 @@ const App = () => {
                     <div className="max-w-7xl mx-auto">
                         <RevealOnScroll className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                             <div>
-                                <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Selected <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Works</span></h2>
-                                <p className="text-slate-400 max-w-2xl text-lg">A showcase of projects across digital branding and physical media.</p>
+                                <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold text-white mb-6">Selected <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Works</span></h2>
+                                <p className="text-slate-400 max-w-2xl text-base sm:text-lg">A showcase of projects across digital branding and physical media.</p>
                             </div>
                             <a href="#" className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 font-medium group">
                                 View All Projects <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -269,7 +269,7 @@ const App = () => {
                                         </div>
                                         <div className="flex justify-between items-start px-2">
                                             <div>
-                                                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">{project.title}</h3>
+                                                <h3 className="text-lg sm:text-xl md:text-2xl font-heading font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">{project.title}</h3>
                                                 <p className="text-slate-400">{project.category}</p>
                                             </div>
                                             <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-orange-500/10 group-hover:border-orange-500/50 transition-all duration-300">
@@ -292,11 +292,11 @@ const App = () => {
 
                             <div className="relative z-10 text-center space-y-8">
                                 <Hexagon className="w-16 h-16 text-orange-500 mx-auto" />
-                                <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white tracking-tight">
+                                <h2 className="text-2xl sm:text-3xl md:text-6xl font-heading font-extrabold text-white tracking-tight">
                                     Ready to elevate your <br />
                                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">brand presence?</span>
                                 </h2>
-                                <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+                                <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto">
                                     Whether you need a cutting-edge digital identity or premium physical prints, Asol Creations is ready to bring your vision to reality.
                                 </p>
 
